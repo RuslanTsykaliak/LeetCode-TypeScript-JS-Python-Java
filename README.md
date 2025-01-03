@@ -11,6 +11,7 @@ The purpose of this repository is to provide clear, efficient, and well-explaine
 - **TypeScript**
 - **JavaScript**
 - **Python**
+- **Java**
 
 ## Usage
 
