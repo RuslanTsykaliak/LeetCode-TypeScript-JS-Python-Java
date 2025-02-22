@@ -4,7 +4,7 @@ class Solution {
         int steps = 0;
 
         // Loop until num equals 0
-        while (num != 0) {
+        while (num > 0) {
             // If num is even, divide it by 2
             if (num % 2 == 0) {
                 num /= 2;
