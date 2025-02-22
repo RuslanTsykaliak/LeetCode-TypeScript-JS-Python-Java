@@ -12,7 +12,7 @@ class Solution {
                 steps++;
                 // If num is odd, subtract 1
             } else {
-                num -= 1;
+                num--;
                 // Increment the step count
                 steps++;
             }
