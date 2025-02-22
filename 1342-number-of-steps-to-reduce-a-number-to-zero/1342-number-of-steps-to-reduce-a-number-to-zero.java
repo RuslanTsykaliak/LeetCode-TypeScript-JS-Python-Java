@@ -8,14 +8,12 @@ class Solution {
             // If num is even, divide it by 2
             if (num % 2 == 0) {
                 num /= 2;
-                // Increment the step count
-                steps++;
-                // If num is odd, subtract 1
+            // If num is odd, subtract 1
             } else {
                 num--;
-                // Increment the step count
-                steps++;
             }
+            // Increment the step count
+            steps++;
         }
 
         return steps;
