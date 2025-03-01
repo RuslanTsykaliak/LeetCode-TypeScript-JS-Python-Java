@@ -1,9 +1,5 @@
 class Solution {
     public void moveZeroes(int[] nums) {
-        int n = nums.length;
-        if (nums == null || n == 0)
-            return;
-
         int insert = 0;
         for (int num : nums) {
             if (num != 0) {
@@ -11,7 +7,7 @@ class Solution {
             }
         }
 
-        while (insert < n) {
+        while (insert < nums.length) {
             nums[insert++] = 0;
         }
     }
