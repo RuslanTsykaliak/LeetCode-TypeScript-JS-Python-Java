@@ -45,7 +45,7 @@ class Solution:
         # return res
 
 
-        # Algorithm:
+        # Algorithm: One Pointer
         # O(n)
 
         # res = 0
@@ -69,24 +69,50 @@ class Solution:
         # return res if res > 0 else 0
 
 
-        # Time Coplexity O(1)
-        res = 0
-        N = len(nums)
+        # Space Complexity O(1)
+        # res = 0
+        # N = len(nums)
 
-        # Track max left value
-        max_left = nums[0]
+        # # Track max left value
+        # max_left = nums[0]
 
-        # Track max_right dynamically instead of using an array
-        max_right = [0] * N
-        max_right[N - 1] = nums[N - 1]
+        # # Track max_right dynamically instead of using an array
+        # max_right = [0] * N
+        # max_right[N - 1] = nums[N - 1]
 
-        for i in range(N - 2, 0, -1):
-            max_right[i] = max(max_right[i + 1], nums[i])
+        # for i in range(N - 2, 0, -1):
+        #     max_right[i] = max(max_right[i + 1], nums[i])
 
-        # Iterate through the middle element `j` while maintaining `max_left`
-        for j in range(1, N - 1):
-            res = max(res, (max_left - nums[j]) * max_right[j + 1])
-            max_left = max(max_left, nums[j])
+        # # Iterate through the middle element `j` while maintaining `max_left`
+        # for j in range(1, N - 1):
+        #     res = max(res, (max_left - nums[j]) * max_right[j + 1])
+        #     max_left = max(max_left, nums[j])
 
-        return res if res > 0 else 0
+        # return res if res > 0 else 0
+
+
+
+        # Space Complexity O(1)
+        n = len(nums)
+        if n < 3:
+            return 0
+            
+        # Keep track of max (nums[i]) and max (nums[i] - nums[j]) so far
+        max_i = 0
+        max_diff = 0
+        result = 0
+        
+        for k in range(n):
+            # Calculate max triplet value using previous max difference
+            # This represents max(nums[i] - nums[j]) * nums[k]
+            result = max(result, max_diff * nums[k])
+            
+            # Update max difference seen so far (nums[i] - nums[j])
+            # This will be used in the next iteration
+            max_diff = max(max_diff, max_i - nums[k])
+            
+            # Update max value seen so far
+            max_i = max(max_i, nums[k])
+            
+        return result
 
