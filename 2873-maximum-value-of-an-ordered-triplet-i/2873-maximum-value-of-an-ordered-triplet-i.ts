@@ -1,10 +1,26 @@
 function maximumTripletValue(nums: number[]): number {
-        let left = 0, middle = 0, res = 0
+    // Algorithm: Optimized Single Pass Greedy
 
-        for (const i of nums) {
-            res = Math.max(res, middle * i)
-            middle = Math.max(left - i, middle)
-            left = Math.max(left, i)
-        }
-        return res
+    // Input: An array of integers 'nums'.
+    // Output: The maximum value of (maxLeft - currentNum) * maxRight, where 
+    //         maxLeft is the maximum number to the left of currentNum, and 
+    //         maxRight is the maximum number to the right of currentNum.
+
+    let maxLeftValue = 0; // Tracks the maximum value encountered from the left.
+    let maxDiff = 0;      // Tracks the maximum difference (maxLeftValue - currentNum).
+    let maxValue = 0;    
+
+    // Iterate through the 'nums' array.
+    for (const currentNum of nums) {
+        // Update the maximum triplet value.
+        maxValue = Math.max(maxValue, maxDiff * currentNum);
+
+        // Update the maximum difference.
+        maxDiff = Math.max(maxLeftValue - currentNum, maxDiff);
+
+        // Update the maximum left value.
+        maxLeftValue = Math.max(maxLeftValue, currentNum);
+    }
+
+    return maxValue;
 };
