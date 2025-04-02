@@ -3,8 +3,6 @@
  * @return {number}
  */
 var maximumTripletValue = function(nums) {
-    //  Algorithm: Gredy with Single Pass
-    //  Time Complexity of O(n) and Space Complexity O(1)
     let res = 0, diff = 0, left = 0
 
     for (const i of nums) {
