@@ -30,16 +30,40 @@ class Solution:
         # return res if res > 0 else 0
 
 
-        # Algoritm: Gredy
+        # Algorithm: Gredy
         # O(n^2)
+
+        # res = 0
+        # N = len(nums)
+        # left = nums[0]
+
+        # for j in range(1, N):
+        #     if nums[j] > left:
+        #         left = nums[j]
+        #     for k in range(j + 1, N):
+        #         res = max(res, (left - nums[j]) * nums[k])
+        # return res
+
+
+        # Algorithm:
+        # O(n)
+
         res = 0
         N = len(nums)
-        left = nums[0]
 
-        for j in range(1, N):
-            if nums[j] > left:
-                left = nums[j]
-            for k in range(j + 1, N):
-                res = max(res, (left - nums[j]) * nums[k])
-        return res
+        # Pre-calculate left
+        left = [0] * N
+        left[0] = nums[0]
+        for i in range(1, N):
+            left[i] = max(left[i - 1], nums[i])
 
+        # Pre-calculate right
+        right = [0] * N
+        right[N - 1] = nums[N - 1]
+        for i in range(N - 2, -1, -1):
+            right[i] = max(right[i + 1], nums[i])
+
+        # Calculate max tiplet value
+        for j in range(1, N - 1):
+            res = max(res, (left[j - 1] - nums[j]) * right[j + 1])
+        return res if res > 0 else 0
