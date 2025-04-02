@@ -2,27 +2,44 @@ class Solution:
     def maximumTripletValue(self, nums: List[int]) -> int:
         # Input: an array of integers nums
         # Output: an integer with the maximum value over all triplets of indices
-        
-        # Algorithm: Burute Force
 
+
+        # Algorithm: Burute Force
+        # O(n^3)
+
+        # res = 0
+        # N = len(nums)
+
+        # # Iterate through all possible j indices
+        # for j in range(1, N - 1):
+        #     # Find the maximum value to the left of j
+        #     max_left = 0
+        #     for i in range(j):
+        #         max_left = max(max_left, nums[i])
+
+        #     # Find the maximum value to the right of j
+        #     max_right = 0
+        #     for k in range(j + 1, N):
+        #         max_right = max(max_right, nums[k])
+
+        #     # Calculate the triplet value and update res
+        #     value = (max_left - nums[j]) * max_right
+        #     res = max(res, value)
+
+        # # Return the final result
+        # return res if res > 0 else 0
+
+
+        # Algoritm: Gredy
+        # O(n^2)
         res = 0
         N = len(nums)
+        left = nums[0]
 
-        # Iterate through all possible j indices
-        for j in range(1, N - 1):
-            # Find the maximum value to the left of j
-            max_left = 0
-            for i in range(j):
-                max_left = max(max_left, nums[i])
-
-            # Find the maximum value to the right of j
-            max_right = 0
+        for j in range(1, N):
+            if nums[j] > left:
+                left = nums[j]
             for k in range(j + 1, N):
-                max_right = max(max_right, nums[k])
+                res = max(res, (left - nums[j]) * nums[k])
+        return res
 
-            # Calculate the triplet value and update res
-            value = (max_left - nums[j]) * max_right
-            res = max(res, value)
-
-        # Return the final result
-        return res if res > 0 else 0
