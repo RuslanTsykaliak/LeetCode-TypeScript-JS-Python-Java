@@ -1,16 +1,10 @@
 function subsetXORSum(nums: number[]): number {
-    // Define a recursive function (dfs) to perform depth-first search
-    const dfs = (i: number, sum: number): number => {
-        // If we've reached the end of the array, return the current sum
-        if (i === nums.length) return sum
+    // Algorithm: Bit Manipulation
+    let res = 0;
 
-        // Recursively call dfs for the next index (i + 1)
-        // Once including the XOR of the current number and the sum
-        // And once without including the current number
-        // THe sum of these two calls is returned
-        return dfs(i + 1, sum ^ nums[i]) + dfs(i + 1, sum)
+    for (let n of nums) {
+        res |= n;
     }
 
-    // Start the dfs from the first index (0) with an initial sum of 0
-    return dfs(0, 0)
+    return res * 2 ** (nums.length - 1)
 };
