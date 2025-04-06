@@ -14,9 +14,9 @@ class Solution:
                         new_path = path + [num]
                         new_len = length + 1
                         res[new_len].append(new_path)
-                        max_len = max(max_len, new_len)
-                        # if new_len > max_len:
-                        #     max_len = new_len
+                        # max_len = max(max_len, new_len)
+                        if new_len > max_len:
+                            max_len = new_len
                         added = True
                         break
                 if added:
