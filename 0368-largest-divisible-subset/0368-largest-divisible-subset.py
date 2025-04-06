@@ -53,24 +53,35 @@ class Solution:
         # return res
 
         # Algorithms: ???
-        d = {}
-        nums = sorted(nums)
-        d[1] = [[nums[0]]]
-        max_level = 1
-        for num in nums[1:]:
-            inserted = False
-            for level in range(max_level, 0, -1):
-                for l in d[level]:
-                    if num % l[-1] == 0:
-                        if level + 1 > max_level:
-                            d[level + 1] = [l + [num]]
-                            max_level += 1
-                        else:
-                            d[level + 1] += [l + [num]]
-                        inserted = True
-                        break
-                if inserted:
-                    break
-                if level == 1 and l == d[level][-1]:
-                    d[1] += [[num]]
-        return d[max_level][0]
+        # Runtime Beats 99.91
+        # d = {}
+        # nums = sorted(nums)
+        # d[1] = [[nums[0]]]
+        # max_level = 1
+        # for num in nums[1:]:
+        #     inserted = False
+        #     for level in range(max_level, 0, -1):
+        #         for l in d[level]:
+        #             if num % l[-1] == 0:
+        #                 if level + 1 > max_level:
+        #                     d[level + 1] = [l + [num]]
+        #                     max_level += 1
+        #                 else:
+        #                     d[level + 1] += [l + [num]]
+        #                 inserted = True
+        #                 break
+        #         if inserted:
+        #             break
+        #         if level == 1 and l == d[level][-1]:
+        #             d[1] += [[num]]
+        # return d[max_level][0]
+
+        subsets = {-1: set()}
+        
+        for num in sorted(nums):
+            subsets[num] = max([subsets[k] for k in subsets if num % k == 0], key=len) | {num}
+        
+        return list(max(subsets.values(), key=len))
+
+
+        
