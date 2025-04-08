@@ -1,30 +1,18 @@
 class Solution {
     public int minimumOperations(int[] nums) {
-        int count = 0;
-        Set<Integer> distinct = new HashSet<>();
-        int index = 0;
-
-        while (index < nums.length) {
-            distinct.clear();
-            boolean allDistinct = true;
-
-            for (int i = index; i < nums.length; i++) {
-                if (distinct.contains(nums[i])) {
-                    allDistinct = false;
-                    break;
-                } else {
-                    distinct.add(nums[i]);
-                }
-            }
-
-            if (allDistinct) {
-                break;
-            } else {
-                count++;
-                index += 3;
-            }
+        if (nums.length == 0) {
+            return 0;
         }
 
-        return count;
+        boolean[] seen = new boolean[101];
+
+        for (int i = nums.length - 1; i >= 0; i--) {
+            if (seen[nums[i]]) {
+                return i / 3 + 1;
+            } else {
+                seen[nums[i]] = true;
+            }
+        }
+        return 0;
     }
 }
