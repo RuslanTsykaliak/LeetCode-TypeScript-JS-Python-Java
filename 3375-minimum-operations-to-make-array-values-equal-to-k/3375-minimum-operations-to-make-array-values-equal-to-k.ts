@@ -6,7 +6,7 @@ function minOperations(nums: number[], k: number): number {
         if (n < k) {
             return -1;
         }
-        h.add(n)l
+        h.add(n);
     }
     return h.has(k) ? h.size - 1 : h.size;
 };
