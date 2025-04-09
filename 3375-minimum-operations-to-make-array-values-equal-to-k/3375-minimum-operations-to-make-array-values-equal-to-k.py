@@ -1,12 +1,9 @@
 class Solution:
     def minOperations(self, nums: List[int], k: int) -> int:
-        if min(nums) < k:
-            return -1
-        
-        uniqueHeights = set()
-        
+        unique = set()
         for n in nums:
+            if n < k:
+                return -1
             if n > k:
-                uniqueHeights.add(n)
-        
-        return len(uniqueHeights)
+                unique.add(n)
+        return len(unique)
