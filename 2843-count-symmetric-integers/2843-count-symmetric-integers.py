@@ -1,6 +1,6 @@
 class Solution:
     def countSymmetricIntegers(self, low: int, high: int) -> int:
-        res = 0
+        count = 0
 
         for i in range(low, high + 1):
             num_str = str(i)
@@ -15,6 +15,6 @@ class Solution:
             right_sum = sum(int(d) for d in num_str[half_len:])
 
             if left_sum == right_sum:
-                res += 1
-                
-        return res
+                count += 1
+        return count
+        
