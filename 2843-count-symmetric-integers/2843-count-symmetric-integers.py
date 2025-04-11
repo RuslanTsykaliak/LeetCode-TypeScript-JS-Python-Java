@@ -1,15 +1,20 @@
 class Solution:
     def countSymmetricIntegers(self, low: int, high: int) -> int:
-        sym_sum = 0
+        res = 0
 
         for i in range(low, high + 1):
-            num = str(i)
-            if len(num) % 2 != 0:
+            num_str = str(i)
+            n = len(num_str)
+
+            if n % 2 != 0:
                 continue
+            
+            half_len = n // 2
 
-            n = len(num) // 2
+            left_sum = sum(int(d) for d in num_str[:half_len])
+            right_sum = sum(int(d) for d in num_str[half_len:])
 
-            if sum(int(d) for d in num[:n]) == sum(int(d) for d in num[n:]):
-                sym_sum += 1
-
-        return sym_sum
+            if left_sum == right_sum:
+                res += 1
+                
+        return res
