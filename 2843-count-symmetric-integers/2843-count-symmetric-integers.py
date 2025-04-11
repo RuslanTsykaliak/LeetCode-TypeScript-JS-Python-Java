@@ -1,12 +1,15 @@
 class Solution:
     def countSymmetricIntegers(self, low: int, high: int) -> int:
-        def is_symmetric(n: int) -> bool:
-            digits = list(map(int, str(n)))
-            length = len(digits)
-            if length % 2 != 0:
-                return False
-            half = length // 2
-            return sum(digits[:half]) == sum(digits[half:])
-        
-        return sum(is_symmetric(x) for x in range(low, high + 1))
-        
+        sym_sum = 0
+
+        for i in range(low, high + 1):
+            num = str(i)
+            if len(num) % 2 != 0:
+                continue
+
+            n = len(num) // 2
+
+            if sum(int(d) for d in num[:n]) == sum(int(d) for d in num[n:]):
+                sym_sum += 1
+
+        return sym_sum
