@@ -1,5 +1,3 @@
-from typing import List # Assuming List is imported if used elsewhere, not needed here
-
 class Solution:
     def countSymmetricIntegers(self, low: int, high: int) -> int:
         count = 0 # Initialize count of symmetric numbers
