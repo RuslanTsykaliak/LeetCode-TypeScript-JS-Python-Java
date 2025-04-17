@@ -23,13 +23,42 @@ class Solution:
         # What will be better solution?
         # Hash Map
 
+        # Counter + Module inside of hash map
+        # count = 0
+        # map = defaultdict(Counter)
+
+        # for i, num in enumerate(nums):
+        #     for j in map[num]:
+        #         if (i * j) % k == 0:
+        #             count += map[num][j]
+        #     map[num][i % k] += 1
+
+        # return count
+
+
+        # Simpler Hash Map
+
+        # index_map = defaultdict(list)
+        # result = 0
+
+        # for i in range(len(nums)):
+        #     for j in index_map[nums[i]]:
+        #         if (i * j) % k == 0:
+        #             result += 1
+
+        #     index_map[nums[i]].append(i)
+
+        # return result
+
+
+        # Trying O(n)
         count = 0
-        map = defaultdict(Counter)
+        mod_groups = defaultdict(lambda: defaultdict(int))
 
         for i, num in enumerate(nums):
-            for j in map[num]:
-                if (i * j) % k == 0:
-                    count += map[num][j]
-            map[num][i % k] += 1
-
+            i_mod = i % k
+            for j_mod in range(k):
+                if (i_mod * j_mod) % k == 0:
+                    count += mod_groups[num][j_mod]
+            mod_groups[num][i_mod] += 1
         return count
