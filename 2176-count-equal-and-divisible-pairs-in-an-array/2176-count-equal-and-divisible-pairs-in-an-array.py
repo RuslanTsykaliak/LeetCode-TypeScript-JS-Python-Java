@@ -1,18 +1,17 @@
 class Solution:
     def countPairs(self, nums: List[int], k: int) -> int:
-        index_map = defaultdict(list)   # nums[i] : [i, i2, i3 ...]
-        result = 0
+        count = 0
+        data = defaultdict(list)
+        for j, num in enumerate(nums):
+            if num in data:
+                for i in data[num]:
+                    if (i * j) % k == 0:
+                        count += 1
+            data[num].append(j)
 
-        for i in range(len(nums)):
-            for j in index_map[nums[i]]:
-                if (i * j) % k == 0:
-                    result += 1
+        return count
 
-            index_map[nums[i]].append(i)
 
-        return result
-
-        
         # Algorithm: Brute Force
         # Time Complexity O(n^2)
 
