@@ -11,7 +11,7 @@ class Solution:
 
         # count = 0
         # n = len(nums)
-        # for i in range(n):
+        # for i in range(n - 1):
         #     for j in range(i + 1, n):
         #         # Just copy past explanation part
         #         if nums[i] != nums[j]: continue
@@ -24,12 +24,12 @@ class Solution:
         # Hash Map
 
         count = 0
-        map = defaultdict(list)
+        map = defaultdict(Counter)
 
-        for i in range(len(nums)):
-            for j in map[nums[i]]:
+        for i, num in enumerate(nums):
+            for j in map[num]:
                 if (i * j) % k == 0:
-                    count += 1
-            map[nums[i]].append(i)
+                    count += map[num][j]
+            map[num][i % k] += 1
 
         return count
