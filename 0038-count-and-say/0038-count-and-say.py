@@ -1,15 +1,14 @@
 class Solution:
     def countAndSay(self, n: int) -> str:
-        # Start from the base term
+        # "abbccc" we want to say what we see 1a 2b 3c.
+        # 122333 we see one 1 two 2 tree 3
+        
         s = "1"
-        # Iteratively build up to the nth term
         for _ in range(n - 1):
             s = self._next_term(s)
         return s
-    
+
     def _next_term(self, s: str) -> str:
-        # Run-length encode the string s
-        # Use a list buffer for O(m) concatenation
         buf = []
         count = 1
         prev = s[0]
@@ -21,7 +20,6 @@ class Solution:
                 buf.append(prev)
                 prev = c
                 count = 1
-        # Append the final run
         buf.append(str(count))
         buf.append(prev)
         return "".join(buf)
