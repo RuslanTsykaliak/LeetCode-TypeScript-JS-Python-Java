@@ -1,23 +1,22 @@
 class Solution:
+    h = ["1"]  
     def countAndSay(self, n: int) -> str:
-        s = "1"
-        for _ in range(n - 1):
-            s = self._next_term(s)
-        return s
-
-    def _next_term(self, s: str) -> str:
-        result = []
-        prev_char = s[0]
-        count = 1
-        for c in s[1:]:
-            if c == prev_char:
-                count += 1
+        def u(n):
+            if n <= len(Solution.h):  
+                return Solution.h[n - 1]  
             else:
-                result.append(str(count))
-                result.append(prev_char)
-                prev_char = c
+                prev = u(n - 1)  
+                result = ""
                 count = 1
-        # append the final run
-        result.append(str(count))
-        result.append(prev_char)
-        return "".join(result)
+
+                for i in range(1, len(prev)):
+                    if prev[i] == prev[i - 1]:  
+                        count += 1
+                    else:
+                        result += f"{count}{prev[i - 1]}"  
+                        count = 1  
+
+                result += f"{count}{prev[-1]}"
+                Solution.h.append(result)  
+                return result
+        return u(n)
