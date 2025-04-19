@@ -1,16 +1,20 @@
 class Solution:
     def countFairPairs(self, nums: List[int], lower: int, upper: int) -> int:
-        nums.sort()
-        fairCount = self.countPairs(nums, upper) - self.countPairs(nums, lower - 1)
-        return fairCount
+        def binSearch(l, r, t):
+            while l <= r:
+                mid = (l + r) // 2
+                if nums[mid] >= t:
+                    r = mid - 1
+                else:
+                    l = mid + 1
+            return r
 
-    def countPairs(self, nums, target):
-        count = 0
-        l, r = 0, len(nums) - 1
-        while l < r:
-            if nums[l] + nums[r] <= target:
-                count = count + (r - l)
-                l = l + 1
-            else:
-                r = r - 1
-        return count
+        nums.sort()
+        res = 0
+        for i in range(len(nums)):
+            lo = lower - nums[i]
+            up = upper - nums[i]
+            res += binSearch(i + 1, len(nums) - 1, up + 1) - binSearch(
+                i + 1, len(nums) - 1, lo
+            )
+        return res
