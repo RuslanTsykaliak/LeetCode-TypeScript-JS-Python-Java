@@ -1,22 +1,15 @@
 class Solution:
     def numRabbits(self, answers: List[int]) -> int:
-        # Input: an array of integers
-        # Output: return the minimum number of rabbits that could be in the forest based on their answers – accouting for both answering and unseen rebbits of the same color.
         # Algorithm: Greedy
-
+        # Data Structure: Hash Map (Dictionary - collections.Counter)
         count = 0
-        d = {}
-        for i in answers:
-            
-            if i == 0:
-                count += 1
-            else:
-                if i not in d or i == d[i]:
-                    d[i] = 0
-                    count += 1 + i
-                else:
-                    d[i] += 1
+        freq = Counter(answers)
+
+        for key, value in freq.items():
+            group_size = key + 1
+            groups, remainder = divmod(value, group_size)
+            count += groups * group_size
+            if remainder:
+                count += group_size
 
         return count
-
-        
