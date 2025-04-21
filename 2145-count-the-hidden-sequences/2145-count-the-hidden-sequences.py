@@ -33,18 +33,33 @@ class Solution:
         # else:
         #     return 0
 
-        #### Beats
+        #### Beats 48.48%
         # Track prefix‐sum extremities (relative to hidden[0])
-        lowest = highest = curr = 0
-        for d in differences:
-            curr += d
-            lowest = min(lowest, curr)
-            highest = max(highest, curr)
+        # lowest = highest = curr = 0
+        # for d in differences:
+        #     curr += d
+        #     lowest = min(lowest, curr)
+        #     highest = max(highest, curr)
 
-        # The hidden sequence spans a range of (highest – lowest).
-        # We can slide that range inside [lower, upper]:
-        span = highest - lowest
-        full_range = upper - lower
+        # # The hidden sequence spans a range of (highest – lowest).
+        # # We can slide that range inside [lower, upper]:
+        # span = highest - lowest
+        # full_range = upper - lower
 
-        # Number of valid starting values = (full_range – span + 1), floored at 0
-        return max(0, full_range - span + 1)
+        # # Number of valid starting values = (full_range – span + 1), floored at 0
+        # return max(0, full_range - span + 1)
+
+
+        ####
+        min_val = max_val = curr = 0
+        for diff in differences:
+            curr += diff
+            min_val = min(min_val, curr)
+            max_val = max(max_val, curr)
+
+        required_range = max_val - min_val
+        available_range = upper - lower
+        possible_starts = available_range - required_range + 1
+
+        return max(0, possible_starts)
+
