@@ -63,18 +63,30 @@ class Solution:
 
         # return max(0, possible_starts)
 
-        ####
-        lowest = highest = current = 0
-        for diff in differences:
-            current += diff
-            if current < lowest:
-                lowest = current
-            if current > highest:
-                highest = current
+        #### 95.96%
+        # lowest = highest = current = 0
+        # for diff in differences:
+        #     current += diff
+        #     if current < lowest:
+        #         lowest = current
+        #     if current > highest:
+        #         highest = current
         
-        differences_range = highest - lowest
-        given_range = upper - lower
-        res = (given_range - differences_range + 1)
+        # differences_range = highest - lowest
+        # given_range = upper - lower
+        # res = (given_range - differences_range + 1)
 
-        return max(0, res)
+        # return max(0, res)
+
+        ####
+        current = min_sum = max_sum = 0
+        for d in differences:
+            current += d
+            if current < min_sum:
+                min_sum = current
+            if current > max_sum:
+                max_sum = current
+        range_ = max_sum - min_sum
+        available = (upper - lower) - range_ + 1
+        return max(0, available)
 
