@@ -10,28 +10,28 @@ class Solution:
         #         return 0
         # return (upper - lower) - (y - x) + 1
 
-        #### Beats 92.93%
-        pfs = list(accumulate(differences, initial = 0))
-        return max(0, upper - lower - max(pfs) + min(pfs) + 1)
+        #### Beats 96.97
+        # pfs = list(accumulate(differences, initial = 0))
+        # return max(0, upper - lower - max(pfs) + min(pfs) + 1)
 
         #### Beats 94.95%
 
-        # lowest = 0
-        # highest = 0
-        # current = 0
-        # for i in differences:
-        #     current += i
-        #     if lowest > current:
-        #         lowest = current
-        #     if highest < current:
-        #         highest = current
-        # differences_range = highest - lowest
-        # given_range = upper - lower
-        # res = (given_range - differences_range + 1)
-        # if res > 0:
-        #     return res
-        # else:
-        #     return 0
+        lowest = 0
+        highest = 0
+        current = 0
+        for i in differences:
+            current += i
+            if lowest > current:
+                lowest = current
+            if highest < current:
+                highest = current
+        differences_range = highest - lowest
+        given_range = upper - lower
+        res = (given_range - differences_range + 1)
+        if res > 0:
+            return res
+        else:
+            return 0
 
         #### Beats 48.48%
         # Track prefix‐sum extremities (relative to hidden[0])
