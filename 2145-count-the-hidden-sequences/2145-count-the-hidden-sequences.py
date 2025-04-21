@@ -1,10 +1,50 @@
 class Solution:
     def numberOfArrays(self, differences: List[int], lower: int, upper: int) -> int:
-        x = y = cur = 0
+        # Beats 62.63%
+        # x = y = cur = 0
+        # for d in differences:
+        #     cur += d
+        #     x = min(x, cur)
+        #     y = max(y, cur)
+        #     if y - x > upper - lower:
+        #         return 0
+        # return (upper - lower) - (y - x) + 1
+
+        #### Beats 92.93%
+        # pfs = list(accumulate(differences, initial = 0))
+        # return max(0, upper - lower - max(pfs) + min(pfs) + 1)
+
+        #### Beats 94.95%
+
+        # lowest = 0
+        # highest = 0
+        # current = 0
+        # for i in differences:
+        #     current += i
+        #     if lowest > current:
+        #         lowest = current
+        #     if highest < current:
+        #         highest = current
+        # differences_range = highest - lowest
+        # given_range = upper - lower
+        # res = (given_range - differences_range + 1)
+        # if res > 0:
+        #     return res
+        # else:
+        #     return 0
+
+        #### Beats
+        # Track prefix‐sum extremities (relative to hidden[0])
+        lowest = highest = curr = 0
         for d in differences:
-            cur += d
-            x = min(x, cur)
-            y = max(y, cur)
-            if y - x > upper - lower:
-                return 0
-        return (upper - lower) - (y - x) + 1
+            curr += d
+            lowest = min(lowest, curr)
+            highest = max(highest, curr)
+
+        # The hidden sequence spans a range of (highest – lowest).
+        # We can slide that range inside [lower, upper]:
+        span = highest - lowest
+        full_range = upper - lower
+
+        # Number of valid starting values = (full_range – span + 1), floored at 0
+        return max(0, full_range - span + 1)
