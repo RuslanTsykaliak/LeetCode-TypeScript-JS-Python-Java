@@ -64,19 +64,19 @@ class Solution:
         # return max(0, possible_starts)
 
         #### 95.96%
-        # lowest = highest = current = 0
-        # for diff in differences:
-        #     current += diff
-        #     if current < lowest:
-        #         lowest = current
-        #     if current > highest:
-        #         highest = current
+        lowest = highest = current = 0
+        for diff in differences:
+            current += diff
+            if current < lowest:
+                lowest = current
+            if current > highest:
+                highest = current
         
-        # differences_range = highest - lowest
-        # given_range = upper - lower
-        # res = (given_range - differences_range + 1)
+        differences_range = highest - lowest
+        given_range = upper - lower
+        res = (given_range - differences_range + 1)
 
-        # return max(0, res)
+        return max(0, res)
 
         #### 86.87
         # current = min_sum = max_sum = 0
@@ -90,12 +90,12 @@ class Solution:
         # available = (upper - lower) - range_ + 1
         # return max(0, available)
 
-        ####
-        lowest = highest = current = 0
-        for diff in differences:
-            current += diff
-            lowest = min(lowest, current)
-            highest = max(highest, current)
-        valid_x = (upper - highest) - (lower - lowest) + 1
-        return max(0, valid_x)
+        #### 25. 25
+        # lowest = highest = current = 0
+        # for diff in differences:
+        #     current += diff
+        #     lowest = min(lowest, current)
+        #     highest = max(highest, current)
+        # valid_x = (upper - highest) - (lower - lowest) + 1
+        # return max(0, valid_x)
 
