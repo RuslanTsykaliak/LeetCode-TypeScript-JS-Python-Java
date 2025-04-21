@@ -78,15 +78,24 @@ class Solution:
 
         # return max(0, res)
 
+        #### 86.87
+        # current = min_sum = max_sum = 0
+        # for d in differences:
+        #     current += d
+        #     if current < min_sum:
+        #         min_sum = current
+        #     if current > max_sum:
+        #         max_sum = current
+        # range_ = max_sum - min_sum
+        # available = (upper - lower) - range_ + 1
+        # return max(0, available)
+
         ####
-        current = min_sum = max_sum = 0
-        for d in differences:
-            current += d
-            if current < min_sum:
-                min_sum = current
-            if current > max_sum:
-                max_sum = current
-        range_ = max_sum - min_sum
-        available = (upper - lower) - range_ + 1
-        return max(0, available)
+        lowest = highest = current = 0
+        for diff in differences:
+            current += diff
+            lowest = min(lowest, current)
+            highest = max(highest, current)
+        valid_x = (upper - highest) - (lower - lowest) + 1
+        return max(0, valid_x)
 
