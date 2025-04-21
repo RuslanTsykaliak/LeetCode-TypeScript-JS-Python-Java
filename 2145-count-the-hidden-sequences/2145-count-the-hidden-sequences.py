@@ -11,8 +11,8 @@ class Solution:
         # return (upper - lower) - (y - x) + 1
 
         #### Beats 92.93%
-        # pfs = list(accumulate(differences, initial = 0))
-        # return max(0, upper - lower - max(pfs) + min(pfs) + 1)
+        pfs = list(accumulate(differences, initial = 0))
+        return max(0, upper - lower - max(pfs) + min(pfs) + 1)
 
         #### Beats 94.95%
 
@@ -64,19 +64,19 @@ class Solution:
         # return max(0, possible_starts)
 
         #### 95.96%
-        lowest = highest = current = 0
-        for diff in differences:
-            current += diff
-            if current < lowest:
-                lowest = current
-            if current > highest:
-                highest = current
+        # lowest = highest = current = 0
+        # for diff in differences:
+        #     current += diff
+        #     if current < lowest:
+        #         lowest = current
+        #     if current > highest:
+        #         highest = current
         
-        differences_range = highest - lowest
-        given_range = upper - lower
-        res = (given_range - differences_range + 1)
+        # differences_range = highest - lowest
+        # given_range = upper - lower
+        # res = (given_range - differences_range + 1)
 
-        return max(0, res)
+        # return max(0, res)
 
         #### 86.87
         # current = min_sum = max_sum = 0
