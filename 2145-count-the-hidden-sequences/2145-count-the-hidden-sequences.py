@@ -50,16 +50,31 @@ class Solution:
         # return max(0, full_range - span + 1)
 
 
+        #### 35.35 %
+        # min_val = max_val = curr = 0
+        # for diff in differences:
+        #     curr += diff
+        #     min_val = min(min_val, curr)
+        #     max_val = max(max_val, curr)
+
+        # required_range = max_val - min_val
+        # available_range = upper - lower
+        # possible_starts = available_range - required_range + 1
+
+        # return max(0, possible_starts)
+
         ####
-        min_val = max_val = curr = 0
+        lowest = highest = current = 0
         for diff in differences:
-            curr += diff
-            min_val = min(min_val, curr)
-            max_val = max(max_val, curr)
+            current += diff
+            if current < lowest:
+                lowest = current
+            if current > highest:
+                highest = current
+        
+        differences_range = highest - lowest
+        given_range = upper - lower
+        res = (given_range - differences_range + 1)
 
-        required_range = max_val - min_val
-        available_range = upper - lower
-        possible_starts = available_range - required_range + 1
-
-        return max(0, possible_starts)
+        return max(0, res)
 
