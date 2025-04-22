@@ -1,7 +1,8 @@
 class Solution:
     MOD = 10**9 + 7
-
     def idealArrays(self, n: int, maxValue: int) -> int:
+        # Algorithms: Sieve of Eratosthenes + Combinatorics + Prime-power factorization
+
         # 1) Sieve for smallest prime divisor
         mind = [0] * (maxValue + 1)
         for p in range(2, maxValue + 1):
@@ -9,14 +10,14 @@ class Solution:
                 for i in range(p, maxValue + 1, p):
                     if mind[i] == 0:
                         mind[i] = p
-
-        # 2) Precompute binomial coefficients C(n+i-1, i) for i up to log2(maxValue)
+        
+        # 2) Precompute binomial coeffcients C(n + i - 1, i)
         maxPow = int(log2(maxValue)) + 1
         C = [1] * (maxPow + 1)
         for i in range(1, maxPow + 1):
             C[i] = comb(n + i - 1, i) % self.MOD
-
-        # 3) For each value i, factorize via mind[] and multiply the counts of partitions
+        
+        # 3) Factor each i and multiply choices per prime exponent
         ans = 0
         for i in range(1, maxValue + 1):
             x, prod = i, 1
@@ -27,5 +28,5 @@ class Solution:
                     exp += 1
                 prod = prod * C[exp] % self.MOD
             ans = (ans + prod) % self.MOD
-
         return ans
+
