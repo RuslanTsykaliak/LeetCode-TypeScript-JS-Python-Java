@@ -1,24 +1,22 @@
 class Solution:
     def countValidSelections(self, nums: List[int]) -> int:
+        # Two Pointers
+        result = 0
         n = len(nums)
-        res = 0
+
+        left = [0] * n
+        right = [0] * n
+
+        for i in range(1, n):
+            left[i] = left[i - 1] + nums[i - 1]
+            right[n - i - 1] = right[n - i] + nums[n - i]
+        
         for i in range(n):
             if nums[i] != 0:
                 continue
-            
-            for direction in [-1, 1]:  # -1 is left, 1 is right
-                curr = i
-                dir = direction
-                tmp = nums[:]  # Make a copy so we don't mess up the original
-                
-                while 0 <= curr < n:
-                    if tmp[curr] == 0:
-                        curr += dir
-                    elif tmp[curr] > 0:
-                        tmp[curr] -= 1
-                        dir *= -1      # reverse direction
-                        curr += dir
-                # At the end, check if all is zero
-                if all(x == 0 for x in tmp):
-                    res += 1
-        return res
+            if left[i] == right[i]:
+                result += 2
+            if abs(left[i] - right[i]) == 1:
+                result += 1
+        
+        return result
