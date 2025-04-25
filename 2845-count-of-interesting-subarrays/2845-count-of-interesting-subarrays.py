@@ -2,8 +2,7 @@ class Solution:
     def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -> int:
         count = 0
         prefix = 0
-        freq = {}
-        freq[0] = 1
+        freq = defaultdict(int, {0: 1})
 
         for n in nums:
             if n % modulo == k:
