@@ -1,11 +1,17 @@
 class Solution:
     def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -> int:
-        cnt = Counter([0])
-        res = 0
-        prefix = 0
-        for i in range(len(nums)):
-            prefix += 1 if nums[i] % modulo == k else 0
-            res += cnt[(prefix - k + modulo) % modulo]
-            cnt[prefix % modulo] += 1
-        return res
-        
+        # Prefix Sum with Hash Map
+
+        current_remainder = 0
+        interesting_subarrays = 0
+        remainder_counter = {0: 1}
+
+        for n in nums:
+            if n % modulo == k:
+                current_remainder = (current_remainder + 1) % modulo
+            need = (current_remainder - k) % modulo
+            interesting_subarrays += remainder_counter.get(need, 0)
+
+            remainder_counter[current_remainder] = (remainder_counter.get(current_remainder, 0) + 1)
+
+        return interesting_subarrays
