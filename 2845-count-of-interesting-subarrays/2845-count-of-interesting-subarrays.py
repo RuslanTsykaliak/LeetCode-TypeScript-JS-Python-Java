@@ -1,16 +1,13 @@
 class Solution:
     def countInterestingSubarrays(self, nums: List[int], modulo: int, k: int) -> int:
-        count = 0
-        prefix = 0
-        freq = {}
-        freq[0] = 1
+        total = 0
+        prefix_mod = 0
+        mod_freq = {0: 1}
 
-        for n in nums:
-            if n % modulo == k:
-                prefix += 1
-                prefix %= modulo
-            count += freq.get((prefix - k) % modulo, 0)
-            freq[prefix] = freq.get(prefix, 0 ) + 1
-
-        return count
-        
+        for num in nums:
+            if num % modulo == k:
+                prefix_mod = (prefix_mod + 1) % modulo
+            needed = (prefix_mod - k) % modulo
+            total += mod_freq.get(needed, 0)
+            mod_freq[prefix_mod] = mod_freq.get(prefix_mod, 0) + 1
+        return total
