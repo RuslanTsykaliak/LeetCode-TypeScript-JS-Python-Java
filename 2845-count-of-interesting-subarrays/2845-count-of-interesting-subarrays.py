@@ -8,7 +8,7 @@ class Solution:
         for n in nums:
             if n % modulo == k:
                 prefix += 1
-                prefix = prefix % modulo
+                prefix %= modulo
             count += freq.get((prefix - k) % modulo, 0)
             freq[prefix] = freq.get(prefix, 0 ) + 1
 
