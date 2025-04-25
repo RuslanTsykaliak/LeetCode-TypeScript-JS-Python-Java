@@ -1,19 +1,14 @@
 class Solution:
     def minimumSumSubarray(self, nums: List[int], l: int, r: int) -> int:
-        n = len(nums)
-        min_sum = float('inf')
 
-        for length in range(l, r + 1):
-            if length > n:
-                continue
-            
-            window_sum = sum(nums[:length])
-            if window_sum > 0:
-                min_sum = min(min_sum, window_sum)
+        mn = inf
+        acc = list(accumulate(nums, initial=0))
 
-            for i in range(length, n):
-                window_sum += nums[i] - nums[i - length]
-                if window_sum > 0:
-                    min_sum = min(min_sum, window_sum)
-        
-        return min_sum if min_sum < float('inf') else -1
+        for left in range(len(acc) - l):
+            for rght in range(left + l, min(left + r + 1, len(acc))):
+
+                sm = acc[rght] - acc[left]
+                if 0 < sm < mn:
+                    mn = sm
+
+        return -1 if mn == inf else mn
