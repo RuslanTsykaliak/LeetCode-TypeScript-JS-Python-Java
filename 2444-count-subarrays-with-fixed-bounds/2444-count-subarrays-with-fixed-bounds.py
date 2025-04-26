@@ -1,24 +1,22 @@
 class Solution:
     def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
+        # Sliding Window
+        # Time Complexity O(n)
+        # Space Complexity O(1)
         count = 0
-        # Positions of the last seen minK, maxK, and any out-of-range value
-        min_i = max_i = last_i = -1
 
-        for i, n in enumerate(nums):
-            # Update last seen positions
-            if n == minK:
-                min_i = i
-            if n == maxK:
-                max_i = i
+        minKIdx = maxKIdx = outOfBoundsIdx = -1
 
-            # If n is outside [minK, maxK], no subarray crossing i can be valid
-            if not (minK <= n <= maxK):
-                last_i = i
-
-            # Earliest index where both minK and maxK are included in [s..i]
-            valid_start = min(min_i, max_i)
-            # All start positions s in (last_i .. valid_start] yield valid subarrays ending at i
-            if valid_start > last_i:
-                count += valid_start - last_i
+        for i, v in enumerate(nums):
+            if v < minK or v > maxK:
+                outOfBoundsIdx = i
+            if v == minK:
+                minKIdx = i
+            if v == maxK:
+                maxKIdx = i
+            
+            validStart = min(minKIdx, maxKIdx)
+            count += max(0, validStart - outOfBoundsIdx)
 
         return count
+        
