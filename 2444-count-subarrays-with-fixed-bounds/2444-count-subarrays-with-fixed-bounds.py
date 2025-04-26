@@ -1,15 +1,23 @@
 class Solution:
-    def countSubarrays(self, nums: List[int], min_k: int, max_k: int) -> int:
+    def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
+        # Sliding Window
+        # Time Complexity O(n)
+        # Space Complexity O(1)
         count = 0
-        min_i = max_i = i0 = -1
-        for i, x in enumerate(nums):
-            if x == min_k:
+
+        min_i = max_i = last_i = -1
+
+        for i, n in enumerate(nums):
+            if n == minK:
                 min_i = i
-            if x == max_k:
+            if n == maxK:
                 max_i = i
-            if not min_k <= x <= max_k:
-                i0 = i
-            j = min_i if min_i < max_i else max_i
-            if j > i0:
-                count += j - i0
+
+            if not (minK <= n <= maxK):
+                last_i = i
+            
+            valid_start = min(min_i, max_i)
+            if valid_start > last_i:
+                count += valid_start - last_i
+
         return count
