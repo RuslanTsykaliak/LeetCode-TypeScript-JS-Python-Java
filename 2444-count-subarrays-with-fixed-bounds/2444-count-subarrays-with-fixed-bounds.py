@@ -1,25 +1,15 @@
 class Solution:
-    def countSubarrays(self, nums: List[int], minK: int, maxK: int) -> int:
+    def countSubarrays(self, nums: List[int], min_k: int, max_k: int) -> int:
         count = 0
-        minIdx = -1
-        maxIdx = -1
-        outIdx = -1
-
-        for i in range(len(nums)):
-            num = nums[i]
-
-            if num < minK or num > maxK:
-                outIdx = i
-
-            if num == minK:
-                minIdx = i
-
-            if num == maxK:
-                maxIdx = i
-            
-            validStart = min(minIdx, maxIdx)
-
-            if validStart > outIdx:
-                count += validStart - outIdx
-        
+        min_i = max_i = i0 = -1
+        for i, x in enumerate(nums):
+            if x == min_k:
+                min_i = i
+            if x == max_k:
+                max_i = i
+            if not min_k <= x <= max_k:
+                i0 = i
+            j = min_i if min_i < max_i else max_i
+            if j > i0:
+                count += j - i0
         return count
