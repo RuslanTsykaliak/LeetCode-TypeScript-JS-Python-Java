@@ -6,17 +6,17 @@ class Solution:
         # 1. count subarrays of length 3
         # 2. sum of 1 and 3 element equal half of the second element
 
-        # Brute Force
-        count = 0
+        # # Brute Force
+        # count = 0
 
-        # we start the loop from 3 element
-        for i in range(2, len(nums)):
-            # check if the first and second element 
-            # equal half of 2 element
-            if nums[i] + nums[i - 2] == nums[i - 1] / 2:
-                count += 1
+        # # we start the loop from 3 element
+        # for i in range(2, len(nums)):
+        #     # check if the first and second element 
+        #     # equal half of 2 element
+        #     if nums[i] + nums[i - 2] == nums[i - 1] / 2:
+        #         count += 1
 
-        return count
+        # return count
 
         # # Sliding Window
         # count = 0
@@ -30,6 +30,18 @@ class Solution:
         #         count += 1
         
         # return count
+
+        count = 0
+        l = 0
+        r = 2
+        while r < len(nums):
+            if (nums[l] + nums[r]) * 2 == nums[l + 1]:
+                count += 1
+            
+            l += 1
+            r += 1
+
+        return count
 
 
 
