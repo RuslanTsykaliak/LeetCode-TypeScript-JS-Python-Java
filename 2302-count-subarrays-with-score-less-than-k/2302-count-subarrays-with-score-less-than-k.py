@@ -5,9 +5,8 @@ class Solution:
         window = 0       # length of the current window
         left = 0         # left boundary of our sliding window
         count = 0        # total number of valid subarrays
-        n = len(nums)
 
-        for right in range(n):
+        for right in range(len(nums)):
             # include the element at index `right`
             total += nums[right]
             window += 1
