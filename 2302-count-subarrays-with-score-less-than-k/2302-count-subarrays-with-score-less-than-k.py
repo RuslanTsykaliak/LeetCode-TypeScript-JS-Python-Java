@@ -5,8 +5,8 @@ class Solution:
         left = 0
         count = 0
 
-        for right, value in enumerate(nums):
-            total += value
+        for right in range(len(nums)):
+            total += nums[right]
             window += 1
         
             while total * window >= k:
