@@ -4,8 +4,9 @@ class Solution:
         window = 0
         left = 0
         count = 0
+        n = len(nums)
 
-        for right in range(len(nums)):
+        for right in range(n):
             total += nums[right]
             window += 1
         
