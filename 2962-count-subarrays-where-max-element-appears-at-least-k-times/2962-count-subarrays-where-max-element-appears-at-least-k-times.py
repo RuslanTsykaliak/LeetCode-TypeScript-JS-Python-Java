@@ -1,14 +1,8 @@
 class Solution:
     def countSubarrays(self, nums: List[int], k: int) -> int:
         # Sliding Window
-        # Input: array nums of positive integers and integer k
-        # Output: integer
-        # Conditions:
-        # count subarrays where maximum integer of nums appears at least k times
-        # 1. we need to know maximum integer in the nums array
-        # 2. the maximum integer should be present k times
-        # 3. we should slide the window and increment count each time the window
-        # satisfies conditions
+        # Time Complexity O(n)
+        # Space Complexity O(1)
 
         count = 0
         top = max(nums)
@@ -23,9 +17,7 @@ class Solution:
                 if nums[left] == top:
                     window -= 1
                 left += 1
-            
-            count += left  # All subarrays ending at right and starting before left are valid
+
+            count += left
 
         return count
-
-        
