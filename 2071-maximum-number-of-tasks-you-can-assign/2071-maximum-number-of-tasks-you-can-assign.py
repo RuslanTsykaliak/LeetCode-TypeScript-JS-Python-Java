@@ -3,36 +3,35 @@ class Solution:
         tasks.sort()
         workers.sort(reverse=True)
 
-        def can_assign(k: int) -> bool:
-            worker_idx = 0
-            remaining_pills = pills
-            pill_candidates = deque[int]()
-
-            for task_idx in range(k - 1, -1, -1):
-                if len(pill_candidates) == 0 and workers[worker_idx] >= tasks[task_idx]:
-                    worker_idx += 1
+        def can_solve(k: int) -> bool:
+            w = 0
+            p = pills
+            q = deque[int]()
+            for t in range(k - 1, -1, -1):
+                if len(q) == 0 and workers[w] >= tasks[t]:
+                    w += 1
                     continue
-                if len(pill_candidates) > 0 and pill_candidates[0] >= tasks[task_idx]:
-                    pill_candidates.popleft()
+                if len(q) > 0 and q[0] >= tasks[t]:
+                    q.popleft()
                     continue
-                while worker_idx < k and workers[worker_idx] + strength >= tasks[task_idx]:
-                    pill_candidates.append(workers[worker_idx])
-                    worker_idx += 1
-                if len(pill_candidates) > 0 and remaining_pills > 0:
-                    pill_candidates.pop()
-                    remaining_pills -= 1
+                while w < k and workers[w] + strength >= tasks[t]:
+                    q.append(workers[w])
+                    w += 1
+                if len(q) > 0 and p > 0:
+                    q.pop()
+                    p -= 1
                     continue
                 return False
             return True
 
         left, right = 0, min(len(tasks), len(workers))
-        max_assignable = 0
+        closest = 0
         while left <= right:
             mid = (left + right) // 2
-            if can_assign(mid):
-                max_assignable = mid
+            if can_solve(mid):
+                closest = mid
                 left = mid + 1
             else:
                 right = mid - 1
 
-        return max_assignable
+        return closest
