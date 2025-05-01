@@ -1,39 +1,37 @@
 class Solution:
-    def maxTaskAssign(
-        self, tasks: List[int], workers: List[int], pills: int, strength: int
-    ) -> int:
-        n, m = len(tasks), len(workers)
+    def maxTaskAssign(self, tasks: List[int], workers: List[int], pills: int, strength: int) -> int:
         tasks.sort()
-        workers.sort()
+        workers.sort(reverse=True)
 
-        def check(mid: int) -> bool:
+        def can_solve(k: int) -> bool:
+            w = 0
             p = pills
-            ws = deque()
-            ptr = m - 1
-            # Enumerate each task from largest to smallest
-            for i in range(mid - 1, -1, -1):
-                while ptr >= m - mid and workers[ptr] + strength >= tasks[i]:
-                    ws.appendleft(workers[ptr])
-                    ptr -= 1
-                if not ws:
-                    return False
-                # If the largest element in the deque is greater than or equal to tasks[i]
-                elif ws[-1] >= tasks[i]:
-                    ws.pop()
-                else:
-                    if p == 0:
-                        return False
+            q = deque[int]()
+            for t in range(k - 1, -1, -1):
+                if len(q) == 0 and workers[w] >= tasks[t]:
+                    w += 1
+                    continue
+                if len(q) > 0 and q[0] >= tasks[t]:
+                    q.popleft()
+                    continue
+                while w < k and workers[w] + strength >= tasks[t]:
+                    q.append(workers[w])
+                    w += 1
+                if len(q) > 0 and p > 0:
+                    q.pop()
                     p -= 1
-                    ws.popleft()
+                    continue
+                return False
             return True
 
-        left, right, ans = 1, min(m, n), 0
+        left, right = 0, min(len(tasks), len(workers))
+        closest = 0
         while left <= right:
             mid = (left + right) // 2
-            if check(mid):
-                ans = mid
+            if can_solve(mid):
+                closest = mid
                 left = mid + 1
             else:
                 right = mid - 1
 
-        return ans
+        return closest
