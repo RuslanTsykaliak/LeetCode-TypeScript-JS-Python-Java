@@ -1,22 +1,35 @@
 class Solution:
     def pushDominoes(self, dominoes: str) -> str:
-        n = len(dominoes)
-        force = [0] * n
-
-        # Populate forces going from left to right
-        f = 0
-        for i in range(n):
-            if dominoes[i] == 'R': f = n
-            elif dominoes[i] == 'L': f = 0
-            else: f = max(f - 1, 0)
-            force[i] += f
-
-        # Populate forces going from right to left
-        f = 0
-        for i in range(n - 1, -1, -1):
-            if dominoes[i] == 'L': f = n
-            elif dominoes[i] == 'R': f = 0
-            else: f = max(f - 1, 0)
-            force[i] -= f
         
-        return "".join('.' if f == 0 else 'R' if f > 0 else 'L' for f in force)
+        res = []
+        r, dots = False, 0
+        for d in dominoes:
+            if d == ".":
+                dots += 1
+            elif d == "R":
+                if r:
+                    res.append("R"*(dots+1))
+                elif dots > 0:
+                    res.append("."*dots)
+                r, dots = True, 0
+            else:  # d == "L"
+                if r:
+                    res.append("R")
+                    if dots > 0:
+                        res.append("R"*(dots//2))
+
+                        if dots % 2 == 1:
+                            res.append(".")
+                        res.append("L"*(dots//2))
+
+                    res.append("L")
+                    r, dots = False, 0
+                else:
+                    res.append("L"*(dots+1))
+                    dots = 0
+
+        if r:
+            res.append("R"*(dots+1))
+        else:
+            res.append("."*dots)
+        return "".join(res)
