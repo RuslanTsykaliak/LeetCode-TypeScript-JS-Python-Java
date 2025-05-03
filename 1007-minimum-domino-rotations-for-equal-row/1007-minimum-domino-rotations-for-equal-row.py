@@ -1,20 +1,21 @@
 class Solution:
     def minDominoRotations(self, tops: List[int], bottoms: List[int]) -> int:
-        def check(candid):
-            # check O(N)
-            merge_to_bottom = merge_to_top = 0
-            for i in range(n):
-                if tops[i] != candid and bottoms[i] != candid:
+        # Algorithm: Greedy
+        # Time Complexity O(n)
+        # Space Complexity O(1)
+
+        def check(target: int) -> int:
+            top_flips, bottom_flips = 0, 0
+            for t, b in zip(tops, bottoms):
+                if t != target and b != target:
                     return -1
-                elif tops[i] != candid:
-                    merge_to_top += 1
-                elif bottoms[i] != candid:
-                    merge_to_bottom += 1
-            return min(merge_to_top, merge_to_bottom)
+                if t != target:
+                    top_flips += 1
+                elif b != target:
+                    bottom_flips += 1
+            return min(top_flips, bottom_flips)
         
-        n = len(tops)
-        rotations = check(tops[0])
-        if rotations != -1 or tops[0] == bottoms[0]:
-            return rotations
-        else:
-            return check(bottoms[0])
+        res = check(tops[0])
+        if res != -1 or tops[0] == bottoms[0]:
+            return res
+        return check(bottoms[0])
