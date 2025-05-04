@@ -17,11 +17,19 @@ class Solution:
 
         # Hash Map 
         
-        count = Counter()
+        # count = Counter()
+        # res = 0
+        # for a, b in dominoes:
+        #     key = (min(a, b), max(a, b))
+        #     res += count[key]
+        #     count[key] += 1
+        # return res
+
+        seen = [0] * 100
         res = 0
         for a, b in dominoes:
-            key = (min(a, b), max(a, b))
-            res += count[key]
-            count[key] += 1
+            val = a * 10 + b if a <= b else b * 10 + a
+            res += seen[val]
+            seen[val] += 1
         return res
 
