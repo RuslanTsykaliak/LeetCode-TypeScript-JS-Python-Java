@@ -16,7 +16,7 @@ class Solution:
 
 
         # Hash Map 
-        
+        # Beats 37%
         # count = Counter()
         # res = 0
         # for a, b in dominoes:
@@ -25,6 +25,7 @@ class Solution:
         #     count[key] += 1
         # return res
 
+        # Beats 97 %
         seen = [0] * 100
         res = 0
         for a, b in dominoes:
