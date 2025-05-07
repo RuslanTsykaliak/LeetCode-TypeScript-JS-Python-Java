@@ -1,19 +1,16 @@
 class Solution:
     def numTilings(self, n: int) -> int:
-        # Dynamic Programming
-        # Time Complexity: O(n)
-        # Space Complexity: O(n)
-
         MOD = 10**9 + 7
-        # Base cases
+        if n == 0: return 0
         if n == 1: return 1
         if n == 2: return 2
-        if n == 0: return 0
-
-        dp = [1, 1, 2]
-
-        for i in range(3, n+1):
-            value = (dp[i-3] + 2 * dp[i-1]) % MOD
-            dp.append(value)
         
-        return dp[-1]
+        # Initialize with the three base cases
+        a, b, c = 1, 1, 2  # a=dp[0], b=dp[1], c=dp[2]
+        
+        for i in range(3, n+1):
+            # Calculate next value and rotate variables
+            current = (a + 2 * c) % MOD
+            a, b, c = b, c, current
+        
+        return c
