@@ -48,6 +48,3 @@ class Solution:
                     if new_arrival_time_at_neighbor < dist[nr][nc]:
                         dist[nr][nc] = new_arrival_time_at_neighbor
                         heapq.heappush(pq, (new_arrival_time_at_neighbor, nr, nc))
-        
-        return -1 # Should ideally not be reached if a path always exists as per typical problem constraints.
-                  # Or if problem guarantees reachability. Given the problem setup, a path is expected.
