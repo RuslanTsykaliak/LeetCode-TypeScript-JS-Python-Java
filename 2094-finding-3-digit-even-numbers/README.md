@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/finding-3-digit-even-numbers/?envType=daily-question&envId=2025-05-12">2094. Finding 3-Digit Even Numbers</a></h2><h3>Easy</h3><hr><p>You are given an integer array <code>digits</code>, where each element is a digit. The array may contain duplicates.</p>
+<h2><a href="https://leetcode.com/problems/finding-3-digit-even-numbers">2094. Finding 3-Digit Even Numbers</a></h2><h3>Easy</h3><hr><p>You are given an integer array <code>digits</code>, where each element is a digit. The array may contain duplicates.</p>
 
 <p>You need to find <strong>all</strong> the <strong>unique</strong> integers that follow the given requirements:</p>
 
