@@ -30,3 +30,5 @@ class Solution:
         for i in range(n):
             res[i] = count1[color1[i]] + max(count2[0], count2[1])
         return res
+
+        
