@@ -1,28 +1,28 @@
 class Solution {
-  public int trapRainWater(int[][] heightMap) {
+    public int trapRainWater(int[][] heightMap) {
         int m = heightMap.length;
         int n = heightMap[0].length;
 
         boolean[][] visited = new boolean[m][n];
 
-        PriorityQueue<int[]> pq = new PriorityQueue<>( (a, b) -> (a[2] - b[2])); //Min heap
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> (a[2] - b[2])); //Min heap
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (i == 0 || j == 0 || i == m - 1 || j == n - 1) {
-                    pq.add(new int[] {i, j, heightMap[i][j]});
+                    pq.add(new int[] { i, j, heightMap[i][j] });
                     visited[i][j] = true;
                 }
             }
         }
 
-        int[][] d = new int[][] {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+        int[][] d = new int[][] { { -1, 0 }, { 1, 0 }, { 0, -1 }, { 0, 1 } };
         int ans = 0;
 
         while (!pq.isEmpty()) {
             int[] curr = pq.poll();
 
-            for (int [] di : d) {
+            for (int[] di : d) {
                 int nx = curr[0] + di[0];
                 int ny = curr[1] + di[1];
 
@@ -35,7 +35,7 @@ class Solution {
                         heightMap[nx][ny] = curr[2];
                     }
 
-                    pq.add(new int[] {nx, ny, heightMap[nx][ny]});
+                    pq.add(new int[] { nx, ny, heightMap[nx][ny] });
                 }
             }
         }
