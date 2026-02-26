@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one">1404. Number of Steps to Reduce a Number in Binary Representation to One</a></h2><h3>Medium</h3><hr><p>Given the binary representation of an integer as a string <code>s</code>, return <em>the number of steps to reduce it to </em><code>1</code><em> under the following rules</em>:</p>
+<h2><a href="https://leetcode.com/problems/number-of-steps-to-reduce-a-number-in-binary-representation-to-one/editorial/?envType=daily-question&envId=2026-02-26">1404. Number of Steps to Reduce a Number in Binary Representation to One</a></h2><h3>Medium</h3><hr><p>Given the binary representation of an integer as a string <code>s</code>, return <em>the number of steps to reduce it to </em><code>1</code><em> under the following rules</em>:</p>
 
 <ul>
 	<li>
@@ -31,7 +31,7 @@ Step 6) 2 is even, divide by 2 and obtain 1.&nbsp;
 <pre>
 <strong>Input:</strong> s = &quot;10&quot;
 <strong>Output:</strong> 1
-<strong>Explanation:</strong> &quot;10&quot; corressponds to number 2 in their decimal representation.
+<strong>Explanation:</strong> &quot;10&quot; corresponds to number 2 in their decimal representation.
 Step 1) 2 is even, divide by 2 and obtain 1.&nbsp; 
 </pre>
 
