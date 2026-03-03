@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/find-kth-bit-in-nth-binary-string">1545. Find Kth Bit in Nth Binary String</a></h2><h3>Medium</h3><hr><p>Given two positive integers <code>n</code> and <code>k</code>, the binary string <code>S<sub>n</sub></code> is formed as follows:</p>
+<h2><a href="https://leetcode.com/problems/find-kth-bit-in-nth-binary-string/?envType=daily-question&envId=2026-03-03">1545. Find Kth Bit in Nth Binary String</a></h2><h3>Medium</h3><hr><p>Given two positive integers <code>n</code> and <code>k</code>, the binary string <code>S<sub>n</sub></code> is formed as follows:</p>
 
 <ul>
 	<li><code>S<sub>1</sub> = &quot;0&quot;</code></li>
