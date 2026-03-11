@@ -77,4 +77,8 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | ------- | ------- |
 | [3129-find-all-possible-stable-binary-arrays-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3129-find-all-possible-stable-binary-arrays-i/) | Medium |
 | [3130-find-all-possible-stable-binary-arrays-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3130-find-all-possible-stable-binary-arrays-ii/) | Hard |
+## Bit Manipulation
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1009-complement-of-base-10-integer](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1009-complement-of-base-10-integer/) | Easy |
 <!---LeetCode Topics End-->
