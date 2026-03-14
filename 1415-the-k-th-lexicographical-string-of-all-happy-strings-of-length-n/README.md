@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n">1415. The k-th Lexicographical String of All Happy Strings of Length n</a></h2><h3>Medium</h3><hr><p>A <strong>happy string</strong> is a string that:</p>
+<h2><a href="https://leetcode.com/problems/the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/?envType=daily-question&envId=2026-03-14">1415. The k-th Lexicographical String of All Happy Strings of Length n</a></h2><h3>Medium</h3><hr><p>A <strong>happy string</strong> is a string that:</p>
 
 <ul>
 	<li>consists only of letters of the set <code>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]</code>.</li>
