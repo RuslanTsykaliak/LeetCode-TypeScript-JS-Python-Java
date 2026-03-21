@@ -1,4 +1,4 @@
-<h2><a href="https://leetcode.com/problems/flip-square-submatrix-vertically">3643. Flip Square Submatrix Vertically</a></h2><h3>Easy</h3><hr><p>You are given an <code>m x n</code> integer matrix <code>grid</code>, and three integers <code>x</code>, <code>y</code>, and <code>k</code>.</p>
+<h2><a href="https://leetcode.com/problems/flip-square-submatrix-vertically/?envType=daily-question&envId=2026-03-21">3643. Flip Square Submatrix Vertically</a></h2><h3>Easy</h3><hr><p>You are given an <code>m x n</code> integer matrix <code>grid</code>, and three integers <code>x</code>, <code>y</code>, and <code>k</code>.</p>
 
 <p>The integers <code>x</code> and <code>y</code> represent the row and column indices of the <strong>top-left</strong> corner of a <strong>square</strong> submatrix and the integer <code>k</code> represents the size (side length) of the square submatrix.</p>
 
