@@ -80,6 +80,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [1980-find-unique-binary-string](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1980-find-unique-binary-string/) | Medium |
 | [2573-find-the-string-with-lcp](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2573-find-the-string-with-lcp/) | Hard |
 | [2839-check-if-strings-can-be-made-equal-with-operations-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2839-check-if-strings-can-be-made-equal-with-operations-i/) | Easy |
+| [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
 ## Recursion
 | Problem Name | Difficulty |
 | ------- | ------- |
@@ -105,6 +106,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [1980-find-unique-binary-string](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1980-find-unique-binary-string/) | Medium |
+| [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
 | [3548-equal-sum-grid-partition-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3548-equal-sum-grid-partition-ii/) | Hard |
 ## Backtracking
 | Problem Name | Difficulty |
@@ -169,6 +171,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | ------- | ------- |
 | [1727-largest-submatrix-with-rearrangements](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1727-largest-submatrix-with-rearrangements/) | Medium |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
+| [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
 | [3567-minimum-absolute-difference-in-sliding-submatrix](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3567-minimum-absolute-difference-in-sliding-submatrix/) | Medium |
 ## Two Pointers
 | Problem Name | Difficulty |
