@@ -77,6 +77,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0657-robot-return-to-origin](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0657-robot-return-to-origin/) | Easy |
 | [1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1415-the-k-th-lexicographical-string-of-all-happy-strings-of-length-n/) | Medium |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [1758-minimum-changes-to-make-alternating-binary-string](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1758-minimum-changes-to-make-alternating-binary-string/) | Easy |
@@ -95,6 +96,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 ## Simulation
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0657-robot-return-to-origin](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0657-robot-return-to-origin/) | Easy |
 | [1545-find-kth-bit-in-nth-binary-string](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1545-find-kth-bit-in-nth-binary-string/) | Medium |
 | [2075-decode-the-slanted-ciphertext](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2075-decode-the-slanted-ciphertext/) | Medium |
 | [2751-robot-collisions](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2751-robot-collisions/) | Hard |
