@@ -36,6 +36,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [0628-maximum-product-of-three-numbers](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0874-walking-robot-simulation](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0874-walking-robot-simulation/) | Medium |
 | [0877-stone-game](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0877-stone-game/) | Medium |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
 | [1288-remove-covered-intervals](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1288-remove-covered-intervals/) | Medium |
 | [1301-number-of-paths-with-max-score](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1301-number-of-paths-with-max-score/) | Hard |
 | [1306-jump-game-iii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1306-jump-game-iii/) | Medium |
@@ -255,6 +256,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [0486-predict-the-winner](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0486-predict-the-winner/) | Medium |
 | [0788-rotated-digits](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0788-rotated-digits/) | Medium |
 | [0877-stone-game](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0877-stone-game/) | Medium |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
 | [1301-number-of-paths-with-max-score](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1301-number-of-paths-with-max-score/) | Hard |
 | [1320-minimum-distance-to-type-a-word-using-two-fingers](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1320-minimum-distance-to-type-a-word-using-two-fingers/) | Hard |
 | [1340-jump-game-v](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1340-jump-game-v/) | Hard |
@@ -330,6 +332,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 ## Prefix Sum
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
 | [1674-minimum-moves-to-make-array-complementary](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1674-minimum-moves-to-make-array-complementary/) | Medium |
 | [1732-find-the-highest-altitude](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1732-find-the-highest-altitude/) | Easy |
 | [1871-jump-game-vii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1871-jump-game-vii/) | Medium |
@@ -416,6 +419,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [0628-maximum-product-of-three-numbers](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0628-maximum-product-of-three-numbers/) | Easy |
 | [0788-rotated-digits](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0788-rotated-digits/) | Medium |
 | [0877-stone-game](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0877-stone-game/) | Medium |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
 | [1344-angle-between-hands-of-a-clock](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1344-angle-between-hands-of-a-clock/) | Medium |
 | [1406-stone-game-iii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1406-stone-game-iii/) | Hard |
 | [1622-fancy-sequence](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1622-fancy-sequence/) | Hard |
@@ -650,5 +654,14 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | ------- | ------- |
 | [0486-predict-the-winner](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0486-predict-the-winner/) | Medium |
 | [0877-stone-game](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0877-stone-game/) | Medium |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
 | [1406-stone-game-iii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1406-stone-game-iii/) | Hard |
+## Minimax
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
+## Zero-Sum Game
+| Problem Name | Difficulty |
+| ------- | ------- |
+| [1140-stone-game-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1140-stone-game-ii/) | Medium |
 <!---LeetCode Topics End-->
