@@ -657,6 +657,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | Problem Name | Difficulty |
 | ------- | ------- |
 | [0061-rotate-list](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0061-rotate-list/) | Medium |
+| [2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2058-find-the-minimum-and-maximum-number-of-nodes-between-critical-points/) | Medium |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2095-delete-the-middle-node-of-a-linked-list/) | Medium |
 ## Number Theory
 | Problem Name | Difficulty |
