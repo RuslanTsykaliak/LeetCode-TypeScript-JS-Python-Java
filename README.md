@@ -214,6 +214,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 ## String
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0115-distinct-subsequences](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0115-distinct-subsequences/) | Hard |
 | [0657-robot-return-to-origin](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0657-robot-return-to-origin/) | Easy |
 | [1081-smallest-subsequence-of-distinct-characters](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1081-smallest-subsequence-of-distinct-characters/) | Medium |
 | [1189-maximum-number-of-balloons](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1189-maximum-number-of-balloons/) | Easy |
@@ -284,6 +285,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 ## Dynamic Programming
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [0115-distinct-subsequences](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0115-distinct-subsequences/) | Hard |
 | [0396-rotate-function](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0396-rotate-function/) | Medium |
 | [0486-predict-the-winner](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0486-predict-the-winner/) | Medium |
 | [0788-rotated-digits](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/0788-rotated-digits/) | Medium |
