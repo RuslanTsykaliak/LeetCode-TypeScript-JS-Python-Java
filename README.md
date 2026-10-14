@@ -199,6 +199,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [3689-maximum-total-subarray-value-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3689-maximum-total-subarray-value-i/) | Medium |
 | [3691-maximum-total-subarray-value-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3691-maximum-total-subarray-value-ii/) | Hard |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3720-lexicographically-smallest-permutation-greater-than-target/) | Medium |
+| [3723-maximize-sum-of-squares-of-digits](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3723-maximize-sum-of-squares-of-digits/) | Medium |
 | [3727-maximum-alternating-sum-of-squares](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3727-maximum-alternating-sum-of-squares/) | Medium |
 ## Matrix
 | Problem Name | Difficulty |
@@ -585,6 +586,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [3629-minimum-jumps-to-reach-end-via-prime-teleportation](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3629-minimum-jumps-to-reach-end-via-prime-teleportation/) | Medium |
 | [3658-gcd-of-odd-and-even-sums](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3658-gcd-of-odd-and-even-sums/) | Easy |
 | [3700-number-of-zigzag-arrays-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3700-number-of-zigzag-arrays-ii/) | Hard |
+| [3723-maximize-sum-of-squares-of-digits](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3723-maximize-sum-of-squares-of-digits/) | Medium |
 | [3751-total-waviness-of-numbers-in-range-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3751-total-waviness-of-numbers-in-range-i/) | Medium |
 | [3753-total-waviness-of-numbers-in-range-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3753-total-waviness-of-numbers-in-range-ii/) | Hard |
 | [3754-concatenate-non-zero-digits-and-multiply-by-sum-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3754-concatenate-non-zero-digits-and-multiply-by-sum-i/) | Easy |
