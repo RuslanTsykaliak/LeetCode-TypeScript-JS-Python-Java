@@ -100,6 +100,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [2812-find-the-safest-path-in-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2897-apply-operations-on-array-to-maximize-sum-of-squares/) | Hard |
 | [2906-construct-product-matrix](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2906-construct-product-matrix/) | Medium |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [2946-matrix-similarity-after-cyclic-shifts](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2946-matrix-similarity-after-cyclic-shifts/) | Easy |
 | [2948-make-lexicographically-smallest-array-by-swapping-elements](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2948-make-lexicographically-smallest-array-by-swapping-elements/) | Medium |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
@@ -408,6 +409,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [2784-check-if-array-is-good](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2784-check-if-array-is-good/) | Easy |
 | [2840-check-if-strings-can-be-made-equal-with-operations-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2840-check-if-strings-can-be-made-equal-with-operations-ii/) | Medium |
 | [2897-apply-operations-on-array-to-maximize-sum-of-squares](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2897-apply-operations-on-array-to-maximize-sum-of-squares/) | Hard |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2958-length-of-longest-subarray-with-at-most-k-frequency/) | Medium |
 | [2996-smallest-missing-integer-greater-than-sequential-prefix-sum](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2996-smallest-missing-integer-greater-than-sequential-prefix-sum/) | Easy |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3016-minimum-number-of-pushes-to-type-word-ii/) | Medium |
@@ -618,6 +620,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | ------- | ------- |
 | [1622-fancy-sequence](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1622-fancy-sequence/) | Hard |
 | [2213-longest-substring-of-one-repeating-character](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2213-longest-substring-of-one-repeating-character/) | Hard |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [3161-block-placement-queries](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3161-block-placement-queries/) | Hard |
 | [3501-maximize-active-section-with-trade-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3501-maximize-active-section-with-trade-ii/) | Hard |
 | [3525-find-x-value-of-array-ii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3525-find-x-value-of-array-ii/) | Hard |
@@ -792,6 +795,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 ## Binary Indexed Tree
 | Problem Name | Difficulty |
 | ------- | ------- |
+| [2913-subarrays-distinct-element-sum-of-squares-i](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2913-subarrays-distinct-element-sum-of-squares-i/) | Easy |
 | [3161-block-placement-queries](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3161-block-placement-queries/) | Hard |
 ## Tree
 | Problem Name | Difficulty |
