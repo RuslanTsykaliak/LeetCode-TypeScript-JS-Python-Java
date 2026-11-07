@@ -74,6 +74,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | [1861-rotating-the-box](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1861-rotating-the-box/) | Medium |
 | [1872-stone-game-viii](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1872-stone-game-viii/) | Hard |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
+| [1882-process-tasks-using-servers](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1882-process-tasks-using-servers/) | Medium |
 | [1886-determine-whether-matrix-can-be-obtained-by-rotation](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1886-determine-whether-matrix-can-be-obtained-by-rotation/) | Easy |
 | [1914-cyclically-rotating-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1914-cyclically-rotating-a-grid/) | Medium |
 | [1967-number-of-strings-that-appear-as-substrings-in-word](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1967-number-of-strings-that-appear-as-substrings-in-word/) | Easy |
@@ -655,6 +656,7 @@ Contributions are welcome! If you have a better solution or a solution to a prob
 | ------- | ------- |
 | [1464-maximum-product-of-two-elements-in-an-array](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1464-maximum-product-of-two-elements-in-an-array/) | Easy |
 | [1878-get-biggest-three-rhombus-sums-in-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1878-get-biggest-three-rhombus-sums-in-a-grid/) | Medium |
+| [1882-process-tasks-using-servers](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/1882-process-tasks-using-servers/) | Medium |
 | [2812-find-the-safest-path-in-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/2812-find-the-safest-path-in-a-grid/) | Medium |
 | [3286-find-a-safe-walk-through-a-grid](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3286-find-a-safe-walk-through-a-grid/) | Medium |
 | [3296-minimum-number-of-seconds-to-make-mountain-height-zero](https://github.com/RuslanTsykaliak/LeetCode-TypeScript-JS-Python-Java/tree/main/3296-minimum-number-of-seconds-to-make-mountain-height-zero/) | Medium |
