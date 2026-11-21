@@ -1,22 +1,14 @@
 class Solution:
-    def numIdenticalPairs(self, nums: List[int]) -> int:
-        # Array. Brute force. Nested Loop.
-        # pairs = 0
-        # n = len(nums)
-        # for i in range(n):
-        #     for j in range(i + 1, n):
-        #         if nums[i] == nums[j]:
-        #             pairs += 1
-        # return pairs
+    def numIdenticalPairs(self, nums: list[int]) -> int:
+        # Input: array of integers
+        # Output: integer, condition nums[i] == nums[j] and i < j
 
-        # Hash Table
-        freq = defaultdict(int)
-        pairs = 0
-        # For each number, the number of good pairs it forms
-        # is equal to the count of the same number we have seen so far.
-        for n in nums:
-            pairs += freq[n]
-            # After counting, we update its frequency
-            freq[n] += 1
-        return pairs
+        n = len(nums)
+        good_pairs = 0
 
+        for i in range(n):
+            for j in range(i + 1, n):
+                if nums[i] == nums[j] and i < j:
+                    good_pairs += 1
+        
+        return good_pairs
