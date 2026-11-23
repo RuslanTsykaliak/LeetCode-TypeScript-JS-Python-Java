@@ -3,6 +3,7 @@ class ProductOfNumbers {
     private ArrayList<Integer> prefixProduct = new ArrayList<>();
     private int size = 0;
 
+
     public ProductOfNumbers() {
         // Initialize the product list with 1 to handle multiplication logic
         this.prefixProduct.add(1);
@@ -17,15 +18,17 @@ class ProductOfNumbers {
             this.prefixProduct.add(1);
             this.size = 0;
         } else {
-            // Append the cumulative product of the current number with the last product
+            // Append the cumulative product of the current number with the
+            // last product
             this.prefixProduct.add(this.prefixProduct.get(size) * num);
             this.size++;
         }
-
+        
     }
     
     public int getProduct(int k) {
-        // Check if the requested product length exceeds the size of the valid product list
+        // Check if the requested product length exceeds the size of the 
+        // valid product list
         if (k > this.size) return 0;
 
         // Compute the product of the last k elements using division
